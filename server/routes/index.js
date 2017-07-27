@@ -4,6 +4,7 @@ import authRoutes from './auth';
 // service routes
 import fflipRoutes from './fflip';
 import swaggerRoutes from './swagger';
+import messagesRoutes from './messages';
 
 const router = express.Router(); // eslint-disable-line new-cap
 
@@ -18,5 +19,7 @@ router.use('/api/auth', authRoutes);
 router.use('/_ff', fflipRoutes);
 
 router.use('/_docs', swaggerRoutes);
+
+router.use('/_sendMessage', messagesRoutes);
 
 export default router;
